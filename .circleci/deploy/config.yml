@@ -1,0 +1,23 @@
+general:
+  debug: 1
+  project_id: some-project
+  bucket: some-bucket
+  deploy_topic: some-topic
+  receive_pub_topic: some-topic
+  web_hook_token: _SLACK_DEFAULT_TOKEN_
+  web_hook_channel: _SLACK_DEFAULT_CHANNEL_
+  aws_key: _AWS_ACCESS_KEY_ID_
+  aws_sec: _AWS_SECRET_ACCESS_KEY_
+  region: ap-northeast-1
+hook:
+- appname: some-app
+  deploy_compress_dir: /some-path
+  deploy_path: /some-path
+  deploy_option:
+    extract: default
+    switching:
+      type: sequential
+  after_deploy:
+    jobs:
+      - run:
+          name: some-after-deploy
