@@ -1,0 +1,25 @@
+description: >
+  This command echos "Hello World" using file inclusion.
+# What will this command do?
+# Descriptions should be short, simple, and clear.
+parameters:
+  config-path:
+    type: string
+    default: "./config.yml"
+    description: ""
+  blue-deploy-licence:
+    type: env-var-name
+    default: BLUE_DEPLOY_LICENCE
+    description: ""
+
+steps:
+  - install
+  - run:
+      name: confirm config.yml
+      command: cat << parameters.config-path >>
+  - run:
+      name: deploy
+      command: |
+        export BLUE_DEPLOY_LICENCE=$(eval echo "\$<< parameters.blue-deploy-licence >>")
+        echo $BLUE_DEPLOY_LICENCE
+        deploy -f << parameters.config-path >>
