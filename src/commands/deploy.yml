@@ -8,7 +8,7 @@ parameters:
     default: "./config.yml"
     description: ""
   blue-deploy-licence:
-    type: env-var-name
+    type: env_var_name
     default: BLUE_DEPLOY_LICENCE
     description: ""
 

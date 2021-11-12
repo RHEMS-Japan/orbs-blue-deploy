@@ -19,5 +19,5 @@ hook:
       type: sequential
   after_deploy:
     jobs:
-      - run:
-          name: some-after-deploy
+    - run:
+        name: some-after-deploy
