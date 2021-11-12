@@ -1,16 +1,16 @@
 description: >
-  This command echos "Hello World" using file inclusion.
+  Run to blue-deploy.
 # What will this command do?
 # Descriptions should be short, simple, and clear.
 parameters:
   config-path:
     type: string
     default: "./config.yml"
-    description: ""
+    description: "The path to the blue-deploy config file."
   blue-deploy-licence:
     type: env_var_name
     default: BLUE_DEPLOY_LICENCE
-    description: ""
+    description: "The license of blue-deploy."
 
 steps:
   - install
