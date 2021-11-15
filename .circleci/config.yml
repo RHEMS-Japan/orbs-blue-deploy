@@ -33,7 +33,7 @@ jobs:
       # This sample integration test will run as long as the greet command exists. Once you remove the greet command you should remove this line.
       # Push new changes first, before adding new tests to your config.
       - blue-deploy/install-blue-deploy
-      - blue-deploy/set-credentials:
+      - blue-deploy/set-deploy-config:
           config-path: ".circleci/deploy/config.yml"
       # - blue-deploy/deploy:
       #     config-path: ".circleci/deploy/config.yml"
