@@ -5,7 +5,7 @@ description: >
 steps:
   - run:
       name: install blue-deploy
-      command: curl -L https://dl-deploy.freaker.io/install-deploy.sh | sudo bash
+      command: curl -L https://dl-deploy.freaker.io/install-deploy.sh | bash
   - run:
       name: confirm version
       command: deploy --version
